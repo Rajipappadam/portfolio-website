@@ -599,6 +599,130 @@ p {
     text-align: center;
 }
 
+/* Coming Soon Projects */
+.no-projects-yet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    padding: 3rem;
+}
+
+.coming-soon {
+    text-align: center;
+    background-color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px dashed var(--border-color);
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+.coming-soon:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+}
+
+.coming-soon i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.coming-soon h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.coming-soon p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.coming-soon .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+}
+
+.coming-soon .btn i {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 1;
+}
+
+/* Projects page coming soon */
+.projects-coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: 4rem 2rem;
+}
+
+.coming-soon-detailed {
+    text-align: center;
+    background-color: var(--white);
+    padding: 4rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 2px dashed var(--primary-color);
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.coming-soon-detailed:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(37, 99, 235, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.coming-soon-detailed i {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.coming-soon-detailed h3 {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.coming-soon-detailed p {
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.coming-soon-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.coming-soon-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.coming-soon-actions .btn i {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 1;
+}
+
 /* Contact Section */
 .contact {
     padding: 80px 0;
