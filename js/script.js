@@ -33,8 +33,15 @@ function initNavigation() {
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip preventDefault if link goes to another page or external site
+            if (href.startsWith('http') || href.includes('.html')) {
+                return; // Let the link navigate normally
+            }
+            
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
@@ -81,6 +88,9 @@ function initNavigation() {
 function initSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     const skillsSection = document.querySelector('.skills');
+
+    // Exit if skills section doesn't exist (e.g., on projects page)
+    if (!skillsSection || skillBars.length === 0) return;
 
     function animateSkillBars() {
         const sectionTop = skillsSection.offsetTop;
@@ -142,6 +152,9 @@ function initProjectFilters() {
 // Contact form functionality
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
+
+    // Exit if contact form doesn't exist (e.g., on projects page)
+    if (!contactForm) return;
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -267,10 +280,11 @@ function initScrollAnimations() {
 // Typewriter effect for hero section
 function initTypeWriter() {
     const typewriterElement = document.querySelector('.hero-content h2');
+    // Exit if element doesn't exist
     if (!typewriterElement) return;
 
     const texts = [
-        'Computer Science Student',
+        'Information Technology Student',
         'Future Software Engineer',
         'Problem Solver',
         'Code Enthusiast'
